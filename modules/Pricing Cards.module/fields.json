@@ -1,0 +1,650 @@
+[ {
+  "id" : "cc850cf7-c584-5fdd-1c43-f3ad712de8d5",
+  "name" : "plans",
+  "label" : "Plans",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "f711979c-d05b-2bef-4a0e-e2010cd96a70",
+    "name" : "header",
+    "label" : "Header",
+    "help_text" : "",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "",
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Pro"
+  }, {
+    "id" : "470d67f5-ff8e-ecc7-3638-01d1d3a25a78",
+    "name" : "icon",
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    }
+  }, {
+    "id" : "774569a2-b6cd-03e8-9ba1-adf4c54f39cb",
+    "name" : "price",
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<h2>$85<span style=\"font-size: 14px;\">/mo</span></h2>"
+  }, {
+    "id" : "94edc4fd-6493-195c-42a9-6e119f77250f",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<p>Flat fee for up to 200 users</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>"
+  }, {
+    "id" : "445bbae0-73ec-5d82-8517-7ca19c41bf15",
+    "name" : "features",
+    "label" : "Features",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 5
+    },
+    "children" : [ {
+      "id" : "2cd81374-fd1f-728a-9489-836a25683c46",
+      "name" : "description",
+      "label" : "Description",
+      "required" : false,
+      "locked" : false,
+      "placeholder" : "24/7 online support",
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "24/7 online support"
+    }, {
+      "id" : "f5e6c747-af3f-a816-8c85-12fcc97db021",
+      "name" : "image",
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "display_width" : null,
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "description" : "Up to 200 users",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "Up to 35 automatic data pushes",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "Limited access to T2D3 API",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "Assign user-level permissions",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "3 solution templates",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    } ]
+  }, {
+    "id" : "abb2a33b-f9c7-cd05-cb02-6cc44cb5ee52",
+    "name" : "button",
+    "label" : "Button",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "ed64997d-08d9-cac5-aa62-8f83541a39bd",
+      "name" : "type",
+      "label" : "Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "btn", "Button" ], [ "cta", "HubSpot CTA" ], [ "none", "None" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "btn"
+    }, {
+      "id" : "02d46c73-19be-1a1c-980b-bee88975d314",
+      "name" : "style",
+      "label" : "Style",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "ed64997d-08d9-cac5-aa62-8f83541a39bd",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "none",
+        "property" : null,
+        "operator" : "NOT_EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "filled", "Filled" ], [ "outlined", "Outlined" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "filled"
+    }, {
+      "id" : "fe0321a0-5f23-bea1-829b-f9ac68ac10d4",
+      "name" : "text",
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "ed64997d-08d9-cac5-aa62-8f83541a39bd",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "btn",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "placeholder" : "TRY FOR FREE",
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "TRY FOR FREE"
+    }, {
+      "id" : "39b4e83e-d338-0ab5-9973-9be466a6d798",
+      "name" : "anchor",
+      "label" : "Anchor",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "ed64997d-08d9-cac5-aa62-8f83541a39bd",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "btn",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "668879ea-c92c-d860-1b47-12e29ce36d31",
+        "name" : "type",
+        "label" : "Type",
+        "required" : true,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "href", "Custom Link" ], [ "link", "HubSpot Link" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "display_width" : null,
+        "default" : "href"
+      }, {
+        "id" : "22b60b7b-87db-24b9-845f-4cea3d0ada65",
+        "name" : "link",
+        "label" : "Link",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : "668879ea-c92c-d860-1b47-12e29ce36d31",
+          "controlling_field_path" : null,
+          "controlling_value_regex" : "link",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+        "show_advanced_rel_options" : false,
+        "type" : "link",
+        "display_width" : null,
+        "default" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      }, {
+        "id" : "f310b2d9-0f98-ccbd-9ac3-d5fa6f90b467",
+        "name" : "href",
+        "label" : "Href",
+        "required" : false,
+        "locked" : false,
+        "visibility" : {
+          "controlling_field" : "668879ea-c92c-d860-1b47-12e29ce36d31",
+          "controlling_field_path" : null,
+          "controlling_value_regex" : "href",
+          "property" : null,
+          "operator" : "EQUAL",
+          "access" : null
+        },
+        "placeholder" : "#",
+        "allow_new_line" : false,
+        "type" : "text",
+        "display_width" : null,
+        "default" : "#"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "display_width" : null,
+      "default" : {
+        "type" : "href",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "href" : "#"
+      }
+    }, {
+      "id" : "3294bd5b-17d8-b78d-001c-d86b3231e35d",
+      "name" : "cta",
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "ed64997d-08d9-cac5-aa62-8f83541a39bd",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta",
+      "display_width" : null
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "type" : "btn",
+      "style" : "filled",
+      "text" : "TRY FOR FREE",
+      "anchor" : {
+        "type" : "href",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "href" : "#"
+      }
+    }
+  }, {
+    "id" : "0eab3708-284e-87bd-5d64-4b644a278d2f",
+    "name" : "badge",
+    "label" : "Badge",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "Most popular",
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "header" : "Basic",
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    },
+    "price" : "<h2>$30<span style=\"font-size: 14px;\">/mo</span></h2>",
+    "description" : "<p>Flat fee for up to 200 users</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>",
+    "features" : [ {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    } ],
+    "button" : {
+      "type" : "btn",
+      "style" : "filled",
+      "text" : "TRY FOR FREE",
+      "anchor" : {
+        "type" : "href",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "href" : "#"
+      }
+    }
+  }, {
+    "header" : "Pro",
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    },
+    "price" : "<h2>$85<span style=\"font-size: 14px;\">/mo</span></h2>",
+    "description" : "<p>Flat fee for up to 200 users</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>",
+    "features" : [ {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    } ],
+    "button" : {
+      "type" : "btn",
+      "style" : "filled",
+      "text" : "TRY FOR FREE",
+      "anchor" : {
+        "type" : "href",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "href" : "#"
+      }
+    },
+    "badge" : "Most popular"
+  }, {
+    "header" : "Enterprise",
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    },
+    "price" : "<h2>Custom</h2>",
+    "description" : "<p>Get in touch for a custom quote</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>",
+    "features" : [ {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    }, {
+      "description" : "24/7 online support",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
+        "alt" : "Checkmark",
+        "loading" : "lazy",
+        "width" : 400,
+        "height" : 400,
+        "max_width" : 400,
+        "max_height" : 400
+      }
+    } ],
+    "button" : {
+      "type" : "btn",
+      "style" : "filled",
+      "text" : "TRY FOR FREE",
+      "anchor" : {
+        "type" : "href",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        },
+        "href" : "#"
+      }
+    }
+  } ]
+} ]

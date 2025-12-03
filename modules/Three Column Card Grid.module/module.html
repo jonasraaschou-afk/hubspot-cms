@@ -1,0 +1,31 @@
+{% import '../macros.html' %}
+
+{% set spacing = (module.spacing | int(52) ) // 2 %}
+
+<div class="kl-card-grid">
+  <div style="margin: -{{ spacing }}px;">
+    {% for item in module.cards %}
+
+      <div class="kl-card-grid__card-wrapper"
+           {% if module.overwrite_spacing %} 
+             style="padding: {{ spacing }}px;"
+           {% endif %}
+        >
+        <div class="kl-card-grid__card">
+          {% if item.image.src %}
+            {% set style = 'background-image: url(%s);'|format(item.image.src) %}
+            {% call render_link(item.anchor, 'kl-card-grid__image', style, true) %}
+            {% endcall %}
+          {% endif %}
+          <div class="kl-card-grid__content">
+            {% if item.preheader %}
+              <span class="kl-card-grid__preheader">{{ item.preheader }}</span>
+            {% endif %}
+            {{ item.content }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+

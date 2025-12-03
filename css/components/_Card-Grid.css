@@ -1,0 +1,85 @@
+.kl-card-grid > div {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -26px;
+}
+.kl-card-grid__card-wrapper {
+  display: flex;
+  flex-basis: 33.3333333333%;
+  padding: 26px;
+}
+@media screen and (max-width: 768px) {
+  .kl-card-grid__card-wrapper {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .kl-card-grid__card-wrapper {
+    flex-basis: 100%;
+  }
+}
+.kl-card-grid__card {
+  width: 100%;
+  border: 0.5px solid rgba({{theme.cards.border_color.color|convert_rgb}}, {{theme.cards.border_color.opacity != null ? theme.cards.border_color.opacity / 100 : 1}});
+  box-shadow: 0px 11px 30px rgba({{theme.cards.box_shadow.color|convert_rgb}}, {{theme.cards.box_shadow.opacity != null ? theme.cards.box_shadow.opacity / 100 : 1}});
+  background-color: rgba({{theme.cards.background.color|convert_rgb}}, {{theme.cards.background.opacity != null ? theme.cards.background.opacity / 100 : 1}});
+  border-radius: {{theme.cards.border_radius}}px;
+  overflow: hidden;
+}
+.kl-card-grid__image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 260px;
+  width: 100%;
+}
+.kl-card-grid__preheader {
+  font-family: {{theme.typography.preheader.font}}, sans-serif;
+  font-size: {{theme.typography.preheader.size}}{{theme.typography.preheader.size_unit}};
+  font-weight: bold;
+  color: {{theme.typography.preheader.color}};
+  display: block;
+  margin: 0 0 0.5rem;
+}
+.kl-card-grid__content {
+  display: block;
+  padding: 20px 24px;
+  color: {{theme.global_colors.text_color.color}};
+  text-decoration: none;
+}
+.kl-card-grid__content h3, .kl-card-grid__content h4 {
+  margin: 0 0 0.5rem;
+}
+.kl-card-grid__content p {
+  margin: 0;
+}
+.kl-card-grid__content:hover, .kl-card-grid__content:focus {
+  color: {{theme.global_colors.text_color.color}};
+  text-decoration: none;
+}
+.kl-card-grid--4-columns > div {
+  margin: -24px -12px;
+}
+.kl-card-grid--4-columns .kl-card-grid__card-wrapper {
+  flex-basis: 25%;
+  padding: 24px 12px;
+}
+@media screen and (max-width: 920px) {
+  .kl-card-grid--4-columns .kl-card-grid__card-wrapper {
+    flex-basis: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .kl-card-grid--4-columns .kl-card-grid__card-wrapper {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .kl-card-grid--4-columns .kl-card-grid__card-wrapper {
+    flex-basis: 100%;
+  }
+}
+.kl-card-grid--4-columns .kl-card-grid__image {
+  height: 220px;
+}

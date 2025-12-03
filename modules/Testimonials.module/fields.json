@@ -1,0 +1,157 @@
+[ {
+  "id" : "d27aa541-28ba-016b-660c-e3a8cab92d93",
+  "name" : "testimonials",
+  "label" : "Testimonials",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "8582c7ae-e284-6da2-4b0a-78805167e874",
+    "name" : "author",
+    "label" : "Author",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "Natasha Brown",
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Natasha Brown"
+  }, {
+    "id" : "2cc718a2-a8c3-df61-2219-4aa24f43a5b2",
+    "name" : "position",
+    "label" : "Position",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "MARKETING MANAGER, DRIVE",
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "MARKETING MANAGER, DRIVE"
+  }, {
+    "id" : "bfa1ca56-348c-b183-17c5-fb6e8b8c4e77",
+    "name" : "content",
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "“We needed a way to show our senior leadership team that marketing was producing results, and that’s hard when your metrics are scattered. This dashboard saved the day.”",
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "“We needed a way to show our senior leadership team that marketing was producing results, and that’s hard when your metrics are scattered. This dashboard saved the day.”"
+  }, {
+    "id" : "65d8eb35-b0c2-d229-3d3d-ab847e27b552",
+    "name" : "picture",
+    "label" : "Picture",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent30.net/hubfs/8823337/Natasha%20Brown%20(1).png",
+      "alt" : null
+    }
+  }, {
+    "id" : "0df55db9-fed9-311a-8cc6-83d5219d06b5",
+    "name" : "background",
+    "label" : "Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "9f5e8204-ed94-6d5f-79eb-285f733f932a",
+      "name" : "overwrite",
+      "label" : "Overwrite",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "display_width" : null,
+      "default" : false
+    }, {
+      "id" : "6c495408-3d3e-0343-9b14-4e142d2c1778",
+      "name" : "color",
+      "label" : "Background color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "9f5e8204-ed94-6d5f-79eb-285f733f932a",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "color",
+      "display_width" : null,
+      "default" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "overwrite" : false,
+      "color" : {
+        "color" : "#FFFFFF",
+        "opacity" : 100
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "author" : "Natasha Brown",
+    "position" : "MARKETING MANAGER, DRIVE",
+    "content" : "“We needed a way to show our senior leadership team that marketing was producing results, and that’s hard when your metrics are scattered. This dashboard saved the day.”",
+    "picture" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null
+    },
+    "color_field" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "author" : "Natasha Brown",
+    "position" : "MARKETING MANAGER, DRIVE",
+    "content" : "“We needed a way to show our senior leadership team that marketing was producing results, and that’s hard when your metrics are scattered. This dashboard saved the day.”",
+    "picture" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null
+    },
+    "color_field" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "author" : "Natasha Brown",
+    "position" : "MARKETING MANAGER, DRIVE",
+    "content" : "“We needed a way to show our senior leadership team that marketing was producing results, and that’s hard when your metrics are scattered. This dashboard saved the day.”",
+    "picture" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null
+    },
+    "color_field" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  } ]
+} ]

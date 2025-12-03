@@ -1,0 +1,12 @@
+.kl-custom-image {
+  display: block;
+}
+.kl-custom-image img {
+  display: block;
+}
+.kl-custom-image--center img {
+  margin: 0 auto;
+}
+.kl-custom-image--right img {
+  margin: 0 0 0 auto;
+}

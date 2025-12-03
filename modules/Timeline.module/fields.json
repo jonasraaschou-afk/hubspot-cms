@@ -1,0 +1,16 @@
+[ {
+  "id" : "e7cdd1ae-c00a-b21f-1e8b-ee5fdf212ce3",
+  "name" : "entries",
+  "label" : "Entries",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "type" : "richtext",
+  "display_width" : null,
+  "default" : [ "<h3>NOV 2017</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>", "<h3>NOV 2017</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>", "<h3>NOV 2017</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>", "<h3>NOV 2017</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" ]
+} ]

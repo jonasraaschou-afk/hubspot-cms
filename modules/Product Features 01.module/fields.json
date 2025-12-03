@@ -1,0 +1,175 @@
+[ {
+  "id" : "05ed3cfa-e767-b71f-7636-c06489c9390d",
+  "name" : "features",
+  "label" : "Features",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "8d6245c2-5b4e-e9bc-0a4a-888e4f584789",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "Reliable system",
+    "allow_new_line" : false,
+    "show_emoji_picker" : true,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "Reliable system"
+  }, {
+    "id" : "a6af430c-9f90-56a0-dc64-bf5f0fb668a2",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack.",
+    "allow_new_line" : false,
+    "show_emoji_picker" : true,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
+  }, {
+    "id" : "dcc19c00-07ac-c211-fccf-99e3fc3fb962",
+    "name" : "figure",
+    "label" : "Figure",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "e594917f-a0cb-eb50-9dbd-2f8cf9c0f8e3",
+      "name" : "type",
+      "label" : "Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "img", "Image" ], [ "icon", "Icon" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "img"
+    }, {
+      "id" : "8457830b-f57f-476a-95cb-1c98612dbd9a",
+      "name" : "image",
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "e594917f-a0cb-eb50-9dbd-2f8cf9c0f8e3",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "img",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "display_width" : null,
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "disabled"
+      }
+    }, {
+      "id" : "67cd9eeb-432b-ceb0-710b-bc9a731f3cdb",
+      "name" : "icon",
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "e594917f-a0cb-eb50-9dbd-2f8cf9c0f8e3",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "icon",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "icon_set" : "fontawesome-5.0.10",
+      "type" : "icon",
+      "display_width" : null,
+      "default" : { }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "disabled"
+      },
+      "icon" : { }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "figure" : {
+      "type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "disabled"
+      },
+      "icon" : { }
+    },
+    "title" : "Reliable system",
+    "description" : "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
+  }, {
+    "figure" : {
+      "type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "disabled"
+      },
+      "icon" : { }
+    },
+    "title" : "Reliable system",
+    "description" : "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
+  }, {
+    "figure" : {
+      "type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "disabled"
+      },
+      "icon" : { }
+    },
+    "title" : "Reliable system",
+    "description" : "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
+  }, {
+    "figure" : {
+      "type" : "img",
+      "image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "disabled"
+      },
+      "icon" : { }
+    },
+    "title" : "Reliable system",
+    "description" : "From direct integrations with card networks and banks to checkout flows in the browser, we operate on and optimize at every level of the financial stack."
+  } ]
+} ]

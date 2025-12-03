@@ -1,0 +1,1087 @@
+[ {
+  "id" : "e121d617-736b-f5c3-5619-9089f7a1f91c",
+  "name" : "logo",
+  "label" : "Logo",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "logo.image",
+    "name" : "image",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "display_width" : null,
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "disabled"
+    }
+  }, {
+    "id" : "9c72435d-46f2-6062-2d3a-16725c5b28ad",
+    "name" : "type",
+    "label" : "Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "href", "Custom Link" ], [ "link", "HubSpot Link" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "href"
+  }, {
+    "id" : "52851bc6-5194-156f-c1b2-cad4a132eea3",
+    "name" : "link",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "9c72435d-46f2-6062-2d3a-16725c5b28ad",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "link",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "type" : "EXTERNAL",
+        "href" : "",
+        "content_id" : null
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "6940bae8-c7e9-d201-8e2a-e325c7c0d488",
+    "name" : "href",
+    "label" : "Href",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "9c72435d-46f2-6062-2d3a-16725c5b28ad",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "href",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "placeholder" : "#",
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "logo" : {
+      "override_inherited_src" : false,
+      "src" : null,
+      "alt" : null
+    },
+    "type" : "href",
+    "link" : {
+      "url" : {
+        "type" : "EXTERNAL",
+        "href" : "",
+        "content_id" : null
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "href" : ""
+  }
+}, {
+  "id" : "9c705ba6-4dfc-dd6c-1cfd-6c1dfc20a290",
+  "name" : "menu",
+  "label" : "Menu",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "e81fd8da-bb9d-8855-2f29-790e93ca0d5d",
+    "name" : "title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "placeholder" : "PRODUCT",
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "PRODUCT"
+  }, {
+    "id" : "10e03971-dbce-c5f8-93c3-42bff0a922db",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "display_width" : null,
+    "default" : "<h2>Product at a glance</h2>\n<p>Short description of what this tab menu is about</p>"
+  }, {
+    "id" : "d3f4d32a-67dc-3c51-6346-ab948a7e6d81",
+    "name" : "type",
+    "label" : "Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "href", "Custom Link" ], [ "link", "HubSpot Link" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "href"
+  }, {
+    "id" : "9299c069-ad74-06a9-eb99-625307b405f7",
+    "name" : "link",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "d3f4d32a-67dc-3c51-6346-ab948a7e6d81",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "link",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "display_width" : null,
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "d9f55d3d-dc97-ce17-8b9f-945359066a24",
+    "name" : "href",
+    "label" : "Href",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "d3f4d32a-67dc-3c51-6346-ab948a7e6d81",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "href",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "type" : "text",
+    "display_width" : null,
+    "default" : ""
+  }, {
+    "id" : "18362216-c27e-da29-1f4d-1f67078b6be9",
+    "name" : "entries",
+    "label" : "Entries",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 6
+    },
+    "children" : [ {
+      "id" : "7fc0e203-90b6-1ea1-7d47-b6842bcca00a",
+      "name" : "description",
+      "label" : "Description",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "display_width" : null,
+      "default" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>"
+    }, {
+      "id" : "22882923-0774-6795-ec24-394fe13e52d0",
+      "name" : "type",
+      "label" : "Type",
+      "required" : true,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "href", "Custom Link" ], [ "link", "HubSpot Link" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "href"
+    }, {
+      "id" : "36dfaa6d-2e15-4eed-7d07-77e8e7edf6f9",
+      "name" : "link",
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "22882923-0774-6795-ec24-394fe13e52d0",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "link",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "62157f91-a012-e552-6848-f0b95dff4e47",
+      "name" : "href",
+      "label" : "Href",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "22882923-0774-6795-ec24-394fe13e52d0",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "href",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : ""
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : [ {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : [ {
+    "title" : "PRODUCT",
+    "description" : "<h2>Product at a glance</h2>\n<p>Short description of what this tab menu is about</p>",
+    "type" : "href",
+    "link" : "",
+    "href" : "",
+    "entries" : [ {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    } ]
+  }, {
+    "title" : "PRODUCT",
+    "description" : "<h2>Product at a glance</h2>\n<p>Short description of what this tab menu is about</p>",
+    "type" : "href",
+    "link" : "",
+    "href" : "",
+    "entries" : [ {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    } ]
+  }, {
+    "title" : "PRODUCT",
+    "description" : "<h2>Product at a glance</h2>\n<p>Short description of what this tab menu is about</p>",
+    "type" : "href",
+    "link" : "",
+    "href" : "",
+    "entries" : [ {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    } ]
+  }, {
+    "title" : "PRODUCT",
+    "description" : "<h2>Product at a glance</h2>\n<p>Short description of what this tab menu is about</p>",
+    "type" : "href",
+    "link" : "",
+    "href" : "",
+    "entries" : [ {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    }, {
+      "description" : "<h3>Platform</h3>\n<p>Feature flags, rollouts, and A/B tests for developers powered by Full Stack</p>",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "type" : "href",
+      "href" : ""
+    } ]
+  } ]
+}, {
+  "id" : "c0152a5f-59d7-c85a-fcd3-d4e22037881f",
+  "name" : "primary_cta",
+  "label" : "Primary CTA",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "6b8e8c9c-6ca0-185d-ba80-043566df29ec",
+    "name" : "type",
+    "label" : "Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "btn", "Button" ], [ "cta", "HubSpot CTA" ], [ "none", "None" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "btn"
+  }, {
+    "id" : "7a528494-617f-50ef-fe9c-9217e135a993",
+    "name" : "style",
+    "label" : "Style",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6b8e8c9c-6ca0-185d-ba80-043566df29ec",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "btn",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "filled", "Filled" ], [ "outlined", "Outlined" ], [ "arrow", "Arrow" ], [ "inherit", "Inherit" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "inherit"
+  }, {
+    "id" : "db76661d-a004-f7ca-3fef-59284b2f9cc4",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6b8e8c9c-6ca0-185d-ba80-043566df29ec",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "btn",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "placeholder" : "SIGN IN",
+    "allow_new_line" : false,
+    "show_emoji_picker" : true,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "SIGN IN"
+  }, {
+    "id" : "39b4e83e-d338-0ab5-9973-9be466a6d798",
+    "name" : "anchor",
+    "label" : "Anchor",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6b8e8c9c-6ca0-185d-ba80-043566df29ec",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "btn",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "668879ea-c92c-d860-1b47-12e29ce36d31",
+      "name" : "type",
+      "label" : "Type",
+      "required" : true,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "href", "Custom Link" ], [ "link", "HubSpot Link" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "href"
+    }, {
+      "id" : "22b60b7b-87db-24b9-845f-4cea3d0ada65",
+      "name" : "link",
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "668879ea-c92c-d860-1b47-12e29ce36d31",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "link",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "f310b2d9-0f98-ccbd-9ac3-d5fa6f90b467",
+      "name" : "href",
+      "label" : "Href",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "668879ea-c92c-d860-1b47-12e29ce36d31",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "href",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "placeholder" : "#",
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "#"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "type" : "href",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "href" : "#"
+    }
+  }, {
+    "id" : "3152f85e-8420-23da-ad53-ad8693e7eed5",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6b8e8c9c-6ca0-185d-ba80-043566df29ec",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "cta",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "type" : "btn",
+    "style" : "inherit",
+    "text" : "SIGN IN",
+    "link" : "#"
+  }
+}, {
+  "id" : "d768f108-1524-7e5c-589d-7dda9db7f67a",
+  "name" : "secondary_cta",
+  "label" : "Secondary CTA",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "280cfa1e-3ef0-0d34-d558-9e60b7430e16",
+    "name" : "type",
+    "label" : "Type",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "btn", "Button" ], [ "cta", "HubSpot CTA" ], [ "none", "None" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "btn"
+  }, {
+    "id" : "0666906f-ea7e-2789-a2c8-afbf13404588",
+    "name" : "style",
+    "label" : "Style",
+    "required" : true,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "280cfa1e-3ef0-0d34-d558-9e60b7430e16",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "btn",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "filled", "Filled" ], [ "outlined", "Outlined" ], [ "arrow", "Arrow" ], [ "inherit", "Inherit" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "display_width" : null,
+    "default" : "filled"
+  }, {
+    "id" : "4a0718fa-ee88-6b0a-7850-b424ac053770",
+    "name" : "text",
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "280cfa1e-3ef0-0d34-d558-9e60b7430e16",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "btn",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "placeholder" : "GET A DEMO",
+    "allow_new_line" : false,
+    "show_emoji_picker" : true,
+    "type" : "text",
+    "display_width" : null,
+    "default" : "GET A DEMO"
+  }, {
+    "id" : "secondary_cta.anchor",
+    "name" : "anchor",
+    "label" : "Anchor",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "280cfa1e-3ef0-0d34-d558-9e60b7430e16",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "btn",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "secondary_cta.anchor.type",
+      "name" : "type",
+      "label" : "Type",
+      "required" : true,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "href", "Custom Link" ], [ "link", "HubSpot Link" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "display_width" : null,
+      "default" : "href"
+    }, {
+      "id" : "secondary_cta.anchor.link",
+      "name" : "link",
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "secondary_cta.anchor.type",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "link",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "display_width" : null,
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "secondary_cta.anchor.href",
+      "name" : "href",
+      "label" : "Href",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "secondary_cta.anchor.type",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "href",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "placeholder" : "#",
+      "allow_new_line" : false,
+      "type" : "text",
+      "display_width" : null,
+      "default" : "#"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "display_width" : null,
+    "default" : {
+      "type" : "href",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "href" : "#"
+    }
+  }, {
+    "id" : "secondary_cta.cta",
+    "name" : "cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "280cfa1e-3ef0-0d34-d558-9e60b7430e16",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "cta",
+    "display_width" : null
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "display_width" : null,
+  "default" : {
+    "type" : "btn",
+    "style" : "filled",
+    "text" : "GET A DEMO",
+    "link" : "#"
+  }
+}, {
+  "id" : "language_switcher",
+  "name" : "language_switcher",
+  "label" : "Language Switcher",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "display_width" : null,
+  "default" : false
+} ]
