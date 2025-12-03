@@ -19,14 +19,14 @@
   font-family: {{theme.global_fonts.secondary_font.font}}, sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: #6B7280;
+  color: #6E6F73; /* nShift Mid Gray */
   transition: color 0.3s ease;
   cursor: pointer;
   user-select: none;
 }
 
 .kl-pricing-v2__toggle-label--active {
-  color: {{theme.global_colors.primary_color.color}};
+  color: #4AA3E7; /* nShift Blue - Primary brand color */
   font-weight: 600;
 }
 
@@ -52,9 +52,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: {{theme.global_colors.primary_color.color}};
+  background-color: #4AA3E7; /* nShift Blue - Primary brand color */
   transition: 0.3s;
   border-radius: 28px;
+  box-shadow: 0 2px 8px rgba(74, 163, 231, 0.2);
 }
 
 .kl-pricing-v2__toggle-slider:before {
@@ -64,13 +65,18 @@
   width: 20px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #FFFFFF; /* nShift White */
   transition: 0.3s;
   border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .kl-pricing-v2__toggle-input:checked + .kl-pricing-v2__toggle-slider:before {
   transform: translateX(24px);
+}
+
+.kl-pricing-v2__toggle-slider:hover {
+  background-color: #00B4C3; /* nShift Cerulean for hover variation */
 }
 
 /* Cards Container */
@@ -92,21 +98,24 @@
 .kl-pricing-v2__card {
   position: relative;
   padding: 36px 32px;
-  border: 0.5px solid rgba({{theme.cards.border_color.color|convert_rgb}}, {{theme.cards.border_color.opacity != null ? theme.cards.border_color.opacity / 100 : 1}});
-  box-shadow: 0px 11px 30px rgba({{theme.cards.box_shadow_light.color|convert_rgb}}, {{theme.cards.box_shadow_light.opacity != null ? theme.cards.box_shadow_light.opacity / 100 : 1}});
-  background-color: rgba({{theme.cards.background.color|convert_rgb}}, {{theme.cards.background.opacity != null ? theme.cards.background.opacity / 100 : 1}});
-  border-radius: {{theme.cards.border_radius}}px;
+  border: 1px solid #E1E1DF; /* nShift Off White for subtle border */
+  box-shadow: 0px 4px 20px rgba(158, 163, 169, 0.1); /* Light Gray with opacity */
+  background-color: #FFFFFF; /* nShift White */
+  border-radius: 12px;
   flex-basis: 346px;
   flex-grow: 1;
-  transition: box-shadow .25s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .kl-pricing-v2__card--featured {
-  box-shadow: 0px 11px 30px rgba({{theme.cards.box_shadow.color|convert_rgb}}, {{theme.cards.box_shadow.opacity != null ? theme.cards.box_shadow.opacity / 100 : 1}});
+  border: 2px solid #4AA3E7; /* nShift Blue border for featured */
+  box-shadow: 0px 8px 30px rgba(74, 163, 231, 0.15); /* Blue shadow for emphasis */
+  transform: scale(1.02);
 }
 
 .kl-pricing-v2__card:hover {
-  box-shadow: 0px 11px 30px rgba({{theme.cards.box_shadow.color|convert_rgb}}, {{theme.cards.box_shadow.opacity != null ? theme.cards.box_shadow.opacity / 100 : 1}});
+  box-shadow: 0px 8px 30px rgba(74, 163, 231, 0.2); /* Blue shadow on hover */
+  transform: translateY(-4px);
 }
 
 .kl-pricing-v2__card + .kl-pricing-v2__card {
@@ -132,13 +141,17 @@
   font-weight: bold;
   line-height: 1;
   min-width: 120px;
-  padding: 10px 12px;
+  padding: 10px 16px;
   border-radius: 40px;
-  background-color: #EBF1FF;
+  background-color: #D73096; /* nShift Pink - Primary accent */
+  color: #FFFFFF; /* White text for contrast */
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(215, 48, 150, 0.25);
 }
 
 /* Icon */
@@ -157,7 +170,7 @@
 
 /* Price */
 .kl-pricing-v2__price {
-  color: {{theme.global_colors.primary_color.color}};
+  color: #00B4C3; /* nShift Cerulean - Professional and distinctive */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -168,12 +181,20 @@
 .kl-pricing-v2__price h5,
 .kl-pricing-v2__price h6 {
   color: inherit;
+  font-weight: 700;
 }
 
 /* Description */
 .kl-pricing-v2__description p {
   font-size: 0.875rem;
   margin: 0 0 0.75rem;
+  color: #2B2B2B; /* nShift Storm Black for readable body text */
+  line-height: 1.6;
+}
+
+.kl-pricing-v2__card h4 {
+  color: #000000; /* nShift Shadow Black for card headers */
+  font-weight: 600;
 }
 
 /* Features */
@@ -188,6 +209,8 @@
   font-size: 0.875rem;
   margin: 0 0 1rem;
   display: flex;
+  color: #47484D; /* nShift Dark Gray for feature text */
+  line-height: 1.5;
 }
 
 .kl-pricing-v2__bullet {
@@ -219,7 +242,9 @@
 /* Horizontal Rule */
 .kl-pricing-v2 hr {
   margin: 1.75rem 0;
-  color: #F3F3F3;
-  background-color: #F3F3F3;
-  height: 2px;
+  color: #E1E1DF; /* nShift Off White */
+  background-color: #E1E1DF;
+  height: 1px;
+  border: none;
+  opacity: 0.6;
 }
