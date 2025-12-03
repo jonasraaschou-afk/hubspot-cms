@@ -1,0 +1,60 @@
+{% import '../macros.html' %}
+
+<div class="kl-pricing-v2">
+  <!-- Pricing Toggle -->
+  <div class="kl-pricing-v2__toggle-container">
+    <span class="kl-pricing-v2__toggle-label kl-pricing-v2__toggle-label--active" data-billing="monthly">
+      {{ module.toggle_labels.monthly_label }}
+    </span>
+    <label class="kl-pricing-v2__toggle-switch">
+      <input type="checkbox" class="kl-pricing-v2__toggle-input" id="pricing-toggle-{{ name }}">
+      <span class="kl-pricing-v2__toggle-slider"></span>
+    </label>
+    <span class="kl-pricing-v2__toggle-label" data-billing="yearly">
+      {{ module.toggle_labels.yearly_label }}
+    </span>
+  </div>
+
+  <!-- Pricing Cards -->
+  <div class="kl-pricing-v2__cards">
+    {% for item in module.plans %}
+      <div class="kl-pricing-v2__card{% if item.badge %} kl-pricing-v2__card--featured{% endif %}">
+        {% if item.badge %}
+          <span class="kl-pricing-v2__badge">{{ item.badge }}</span>
+        {% endif %}
+        {% if item.icon.src %}
+          <div class="kl-pricing-v2__icon">
+            <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" />
+          </div>
+        {% endif %}
+        <h4>{{ item.header }}</h4>
+
+        <!-- Monthly Price -->
+        <div class="kl-pricing-v2__price kl-pricing-v2__price--monthly" data-billing="monthly">
+          {{ item.monthly_price }}
+        </div>
+
+        <!-- Yearly Price -->
+        <div class="kl-pricing-v2__price kl-pricing-v2__price--yearly" data-billing="yearly" style="display: none;">
+          {{ item.yearly_price }}
+        </div>
+
+        <div class="kl-pricing-v2__description">
+          {{ item.description }}
+        </div>
+        <hr/>
+        <ul class="kl-pricing-v2__features">
+          {% for feature in item.features %}
+            <li>
+              <span class="kl-pricing-v2__bullet">{{ render_image(feature.image) }}</span>
+              <span>{{ feature.description }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+        <div class="kl-pricing-v2__button">
+          {{ render_button(item.button) }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
