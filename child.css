@@ -6,5 +6,271 @@
 /***********************************************/
 
 /*****************************************/
-/* Start your style declarations here    */
+/* nShift Brand Colors - Global Variables */
+/*****************************************/
+
+:root {
+  /* Primary Colors */
+  --nshift-pink: #D73096;
+  --nshift-gold: #DE8208;
+  --nshift-blue: #4AA3E7;
+  --nshift-cerulean: #00B4C3;
+
+  /* Secondary Colors */
+  --nshift-orchid: #E296A0;
+  --nshift-nordic-green: #339999;
+
+  /* Primary Tints (50%) */
+  --nshift-pink-50: #EB97CA;
+  --nshift-gold-50: #EEC083;
+  --nshift-cerulean-50: #7FD9E1;
+  --nshift-blue-50: #A4D1F3;
+
+  /* Primary Tints (25%) */
+  --nshift-pink-25: #F5CBE5;
+  --nshift-gold-25: #F7E0C1;
+  --nshift-cerulean-25: #BFECF0;
+  --nshift-blue-25: #D2E8F9;
+
+  /* Secondary Tints (50%) */
+  --nshift-orchid-50: #F0CACF;
+  --nshift-nordic-green-50: #99CCCC;
+
+  /* Secondary Tints (25%) */
+  --nshift-orchid-25: #F8E5E7;
+  --nshift-nordic-green-25: #CCE5E5;
+
+  /* Black & Gray Scale */
+  --nshift-shadow-black: #000000;
+  --nshift-storm-black: #2B2B2B;
+  --nshift-dark-gray: #47484D;
+  --nshift-mid-gray: #6E6F73;
+  --nshift-light-gray: #9EA3A9;
+
+  /* White Scale */
+  --nshift-white: #FFFFFF;
+  --nshift-off-white: #E1E1DF;
+  --nshift-soft-white: #FAFAFA;
+}
+
+/*****************************************/
+/* Global Brand Color Overrides         */
+/*****************************************/
+
+/* Primary brand color applications */
+body {
+  color: var(--nshift-storm-black);
+}
+
+a {
+  color: var(--nshift-blue);
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--nshift-cerulean);
+}
+
+/* Headings with brand colors */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--nshift-shadow-black);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left-color: var(--nshift-cerulean);
+  color: var(--nshift-dark-gray);
+}
+
+/* Horizontal rules */
+hr {
+  background-color: var(--nshift-off-white);
+  color: var(--nshift-off-white);
+}
+
+/* Focus outlines */
+:focus {
+  outline-color: var(--nshift-blue);
+}
+
+/*****************************************/
+/* Button Global Overrides              */
+/*****************************************/
+
+button:not(.button--outlined):not(.button--arrow),
+.button:not(.button--outlined):not(.button--arrow),
+.button_cta a:not(.button--outlined):not(.button--arrow),
+.widget-type-cta {
+  background-color: var(--nshift-blue);
+  border-color: var(--nshift-blue);
+  color: var(--nshift-white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(74, 163, 231, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:not(.button--outlined):not(.button--arrow):hover,
+button:not(.button--outlined):not(.button--arrow):focus,
+.button:not(.button--outlined):not(.button--arrow):hover,
+.button:not(.button--outlined):not(.button--arrow):focus,
+.button_cta a:not(.button--outlined):not(.button--arrow):hover,
+.button_cta a:not(.button--outlined):not(.button--arrow):focus,
+.widget-type-cta:hover,
+.widget-type-cta:focus {
+  background-color: var(--nshift-cerulean);
+  border-color: var(--nshift-cerulean);
+  color: var(--nshift-white);
+  box-shadow: 0 4px 12px rgba(0, 180, 195, 0.3);
+  transform: translateY(-2px);
+}
+
+.button--outlined,
+.button_cta.button--outlined a {
+  background-color: transparent;
+  color: var(--nshift-blue);
+  border: 2px solid var(--nshift-blue);
+}
+
+.button--outlined:hover,
+.button--outlined:focus,
+.button_cta.button--outlined a:hover,
+.button_cta.button--outlined a:focus {
+  background-color: var(--nshift-blue);
+  color: var(--nshift-white);
+}
+
+.button--arrow,
+.button_cta.button--arrow a {
+  color: var(--nshift-dark-gray);
+}
+
+.button--arrow:hover,
+.button--arrow:focus,
+.button_cta.button--arrow a:hover,
+.button_cta.button--arrow a:focus {
+  color: var(--nshift-blue);
+}
+
+/*****************************************/
+/* Card Components                       */
+/*****************************************/
+
+/* Global card styling */
+.kl-pricing__card,
+.simple-card,
+.featured-card,
+.card-grid__item {
+  background-color: var(--nshift-white);
+  border: 1px solid var(--nshift-off-white);
+  box-shadow: 0 4px 20px rgba(158, 163, 169, 0.1);
+  transition: all 0.3s ease;
+}
+
+.kl-pricing__card:hover,
+.simple-card:hover,
+.featured-card:hover,
+.card-grid__item:hover {
+  box-shadow: 0 8px 30px rgba(74, 163, 231, 0.15);
+  transform: translateY(-4px);
+}
+
+.kl-pricing__card--featured {
+  border: 2px solid var(--nshift-blue);
+  box-shadow: 0 8px 30px rgba(74, 163, 231, 0.2);
+}
+
+/* Pricing specific */
+.kl-pricing__price {
+  color: var(--nshift-cerulean);
+}
+
+.kl-pricing__badge {
+  background-color: var(--nshift-pink);
+  color: var(--nshift-white);
+  box-shadow: 0 2px 8px rgba(215, 48, 150, 0.25);
+}
+
+/*****************************************/
+/* Navigation & Header                   */
+/*****************************************/
+
+.header__navigation a {
+  color: var(--nshift-dark-gray);
+  transition: color 0.3s ease;
+}
+
+.header__navigation a:hover,
+.header__navigation a:focus,
+.header__navigation a.active {
+  color: var(--nshift-blue);
+}
+
+/*****************************************/
+/* Footer                                */
+/*****************************************/
+
+.footer {
+  background-color: var(--nshift-shadow-black);
+  color: var(--nshift-light-gray);
+}
+
+.footer a {
+  color: var(--nshift-light-gray);
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: var(--nshift-cerulean);
+}
+
+/*****************************************/
+/* Forms                                 */
+/*****************************************/
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  border-color: var(--nshift-off-white);
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--nshift-blue);
+  outline-color: var(--nshift-blue);
+}
+
+/*****************************************/
+/* Accents & Highlights                  */
+/*****************************************/
+
+.accent-pink { color: var(--nshift-pink); }
+.accent-gold { color: var(--nshift-gold); }
+.accent-blue { color: var(--nshift-blue); }
+.accent-cerulean { color: var(--nshift-cerulean); }
+
+.bg-pink { background-color: var(--nshift-pink); }
+.bg-gold { background-color: var(--nshift-gold); }
+.bg-blue { background-color: var(--nshift-blue); }
+.bg-cerulean { background-color: var(--nshift-cerulean); }
+.bg-soft-white { background-color: var(--nshift-soft-white); }
+
+/*****************************************/
+/* Start your custom style declarations  */
 /*****************************************/

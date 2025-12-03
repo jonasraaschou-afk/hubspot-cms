@@ -1,10 +1,11 @@
 .kl-faq {
   background: #FFFFFF;
-  border: 3px solid #F3F3F3;
-  border-radius: 9px;
+  border: 2px solid #E1E1DF; /* nShift Off White */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(158, 163, 169, 0.08);
 }
 .kl-faq__entry + .kl-faq__entry {
-  border-top: 3px solid #F3F3F3;
+  border-top: 1px solid #E1E1DF; /* nShift Off White */
 }
 .kl-faq__entry--active .kl-faq__icon {
   transform: rotate(90deg);
