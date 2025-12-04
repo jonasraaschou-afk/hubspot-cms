@@ -1,18 +1,151 @@
-/* Pricing V2 Container */
+/* =====================================
+   Pricing V2 - Advanced SaaS Pricing Module
+   ===================================== */
+
 .kl-pricing-v2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Toggle Container */
+/* =====================================
+   Volume Slider Section
+   ===================================== */
+
+.kl-pricing-v2__volume-section {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.kl-pricing-v2__slider-label {
+  font-family: {{theme.global_fonts.secondary_font.font}}, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2B2B2B; /* nShift Storm Black */
+  display: block;
+  margin-bottom: 16px;
+}
+
+.kl-pricing-v2__slider-display {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00B4C3; /* nShift Cerulean */
+  margin-bottom: 32px;
+}
+
+.kl-pricing-v2__volume-value {
+  font-size: 2.5rem;
+}
+
+.kl-pricing-v2__slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.kl-pricing-v2__slider {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  outline: none;
+  z-index: 2;
+  cursor: pointer;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.kl-pricing-v2__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #4AA3E7; /* nShift Blue */
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(74, 163, 231, 0.4);
+  transition: all 0.3s ease;
+}
+
+.kl-pricing-v2__slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #00B4C3; /* nShift Cerulean */
+  box-shadow: 0 4px 12px rgba(0, 180, 195, 0.5);
+}
+
+.kl-pricing-v2__slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #4AA3E7;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(74, 163, 231, 0.4);
+  transition: all 0.3s ease;
+}
+
+.kl-pricing-v2__slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: #00B4C3;
+  box-shadow: 0 4px 12px rgba(0, 180, 195, 0.5);
+}
+
+.kl-pricing-v2__slider-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: #E1E1DF; /* nShift Off White */
+  border-radius: 4px;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.kl-pricing-v2__slider-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #4AA3E7 0%, #00B4C3 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  box-shadow: 0 2px 6px rgba(74, 163, 231, 0.3);
+}
+
+.kl-pricing-v2__slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #6E6F73; /* nShift Mid Gray */
+  font-weight: 500;
+  padding: 0 4px;
+}
+
+/* =====================================
+   Billing Toggle Section
+   ===================================== */
+
 .kl-pricing-v2__toggle-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
   margin-bottom: 48px;
+  padding: 16px 24px;
+  background: #FAFAFA; /* nShift Soft White */
+  border-radius: 50px;
+  box-shadow: 0 2px 12px rgba(158, 163, 169, 0.08);
 }
 
 .kl-pricing-v2__toggle-label {
@@ -20,14 +153,41 @@
   font-size: 1rem;
   font-weight: 500;
   color: #6E6F73; /* nShift Mid Gray */
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .kl-pricing-v2__toggle-label--active {
-  color: #4AA3E7; /* nShift Blue - Primary brand color */
+  color: #4AA3E7; /* nShift Blue */
   font-weight: 600;
+}
+
+.kl-pricing-v2__discount-badge {
+  background: linear-gradient(135deg, #D73096 0%, #DE8208 100%); /* Pink to Gold gradient */
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(215, 48, 150, 0.3);
+  animation: badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
 }
 
 /* Toggle Switch */
@@ -52,7 +212,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #4AA3E7; /* nShift Blue - Primary brand color */
+  background-color: #4AA3E7; /* nShift Blue */
   transition: 0.3s;
   border-radius: 28px;
   box-shadow: 0 2px 8px rgba(74, 163, 231, 0.2);
@@ -76,61 +236,70 @@
 }
 
 .kl-pricing-v2__toggle-slider:hover {
-  background-color: #00B4C3; /* nShift Cerulean for hover variation */
+  background-color: #00B4C3; /* nShift Cerulean */
 }
 
-/* Cards Container */
+/* =====================================
+   Pricing Cards
+   ===================================== */
+
 .kl-pricing-v2__cards {
   display: flex;
-  align-items: flex-start;
-  text-align: center;
-  width: 100%;
+  align-items: stretch;
   justify-content: center;
+  width: 100%;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
   .kl-pricing-v2__cards {
-    display: block;
+    flex-direction: column;
   }
 }
 
 /* Individual Card */
 .kl-pricing-v2__card {
   position: relative;
-  padding: 36px 32px;
-  border: 1px solid #E1E1DF; /* nShift Off White for subtle border */
-  box-shadow: 0px 4px 20px rgba(158, 163, 169, 0.1); /* Light Gray with opacity */
+  padding: 40px 32px;
+  border: 2px solid #E1E1DF; /* nShift Off White */
+  box-shadow: 0px 4px 20px rgba(158, 163, 169, 0.1);
   background-color: #FFFFFF; /* nShift White */
-  border-radius: 12px;
-  flex-basis: 346px;
-  flex-grow: 1;
-  transition: all 0.3s ease-in-out;
-}
-
-.kl-pricing-v2__card--featured {
-  border: 2px solid #4AA3E7; /* nShift Blue border for featured */
-  box-shadow: 0px 8px 30px rgba(74, 163, 231, 0.15); /* Blue shadow for emphasis */
-  transform: scale(1.02);
+  border-radius: 16px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .kl-pricing-v2__card:hover {
-  box-shadow: 0px 8px 30px rgba(74, 163, 231, 0.2); /* Blue shadow on hover */
-  transform: translateY(-4px);
+  box-shadow: 0px 12px 40px rgba(74, 163, 231, 0.15);
+  transform: translateY(-8px);
+  border-color: #00B4C3; /* nShift Cerulean */
 }
 
-.kl-pricing-v2__card + .kl-pricing-v2__card {
-  margin-left: 72px;
+/* Featured/Recommended Card */
+.kl-pricing-v2__card--featured {
+  border: 2px solid #D73096; /* nShift Pink */
+  box-shadow: 0px 8px 30px rgba(215, 48, 150, 0.15);
 }
 
-@media screen and (max-width: 1024px) {
-  .kl-pricing-v2__card + .kl-pricing-v2__card {
-    margin-left: 16px;
-  }
+.kl-pricing-v2__card--recommended {
+  border: 3px solid #4AA3E7; /* nShift Blue */
+  box-shadow: 0px 12px 40px rgba(74, 163, 231, 0.25);
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.kl-pricing-v2__card--recommended .kl-pricing-v2__plan-name {
+  color: #4AA3E7;
 }
 
 @media screen and (max-width: 768px) {
-  .kl-pricing-v2__card + .kl-pricing-v2__card {
-    margin: 24px 0 0;
+  .kl-pricing-v2__card {
+    max-width: 100%;
   }
 }
 
@@ -143,8 +312,8 @@
   min-width: 120px;
   padding: 10px 16px;
   border-radius: 40px;
-  background-color: #D73096; /* nShift Pink - Primary accent */
-  color: #FFFFFF; /* White text for contrast */
+  background-color: #D73096; /* nShift Pink */
+  color: #FFFFFF;
   position: absolute;
   top: 0;
   left: 50%;
@@ -156,9 +325,9 @@
 
 /* Icon */
 .kl-pricing-v2__icon {
-  height: 28px;
+  height: 48px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   margin: 0 0 1.5rem;
 }
@@ -168,83 +337,186 @@
   display: block;
 }
 
-/* Price */
-.kl-pricing-v2__price {
-  color: #00B4C3; /* nShift Cerulean - Professional and distinctive */
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* Plan Name */
+.kl-pricing-v2__plan-name {
+  color: #000000; /* nShift Shadow Black */
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  text-align: center;
 }
 
-.kl-pricing-v2__price h1,
-.kl-pricing-v2__price h2,
-.kl-pricing-v2__price h3,
-.kl-pricing-v2__price h4,
-.kl-pricing-v2__price h5,
-.kl-pricing-v2__price h6 {
-  color: inherit;
+/* Price Container */
+.kl-pricing-v2__price-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.kl-pricing-v2__price {
+  color: #00B4C3; /* nShift Cerulean */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+}
+
+.kl-pricing-v2__price-amount {
+  font-size: 3rem;
   font-weight: 700;
+  line-height: 1;
+}
+
+.kl-pricing-v2__price-currency {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.kl-pricing-v2__price-period {
+  font-size: 1rem;
+  color: #6E6F73; /* nShift Mid Gray */
+}
+
+.kl-pricing-v2__price-note {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #D2E8F9; /* 25% Blue tint */
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.kl-pricing-v2__price-note small {
+  color: #4AA3E7; /* nShift Blue */
+  font-weight: 500;
 }
 
 /* Description */
-.kl-pricing-v2__description p {
-  font-size: 0.875rem;
-  margin: 0 0 0.75rem;
-  color: #2B2B2B; /* nShift Storm Black for readable body text */
-  line-height: 1.6;
+.kl-pricing-v2__description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
-.kl-pricing-v2__card h4 {
-  color: #000000; /* nShift Shadow Black for card headers */
-  font-weight: 600;
+.kl-pricing-v2__description p {
+  font-size: 0.875rem;
+  color: #2B2B2B; /* nShift Storm Black */
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
+/* Horizontal Rule */
+.kl-pricing-v2 hr {
+  margin: 1.75rem 0;
+  background-color: #E1E1DF; /* nShift Off White */
+  height: 1px;
+  border: none;
+  opacity: 0.6;
 }
 
 /* Features */
 .kl-pricing-v2__features {
   text-align: left;
   list-style: none;
-  margin: 0 0 2.625rem;
+  margin: 0 0 2rem;
   padding: 0;
 }
 
 .kl-pricing-v2__features li {
   font-size: 0.875rem;
-  margin: 0 0 1rem;
+  margin: 0 0 0.875rem;
   display: flex;
-  color: #47484D; /* nShift Dark Gray for feature text */
+  align-items: flex-start;
+  color: #47484D; /* nShift Dark Gray */
   line-height: 1.5;
+  gap: 12px;
 }
 
-.kl-pricing-v2__bullet {
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  margin: 2px 0.75rem 0 0;
+.kl-pricing-v2__feature-icon {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
 }
 
-.kl-pricing-v2__bullet img {
-  display: block;
+.kl-pricing-v2__feature--disabled {
+  opacity: 0.4;
 }
 
 /* Button */
-.kl-pricing-v2__button .button_cta {
-  width: 100%;
-}
-
-.kl-pricing-v2__button .button_cta a {
-  padding-left: 0;
-  padding-right: 0;
+.kl-pricing-v2__button {
+  margin-top: auto;
 }
 
 .kl-pricing-v2__button a {
   width: 100%;
+  display: block;
+  text-align: center;
+  padding: 14px 24px;
+  background-color: #4AA3E7; /* nShift Blue */
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(74, 163, 231, 0.2);
 }
 
-/* Horizontal Rule */
-.kl-pricing-v2 hr {
-  margin: 1.75rem 0;
-  color: #E1E1DF; /* nShift Off White */
-  background-color: #E1E1DF;
-  height: 1px;
-  border: none;
-  opacity: 0.6;
+.kl-pricing-v2__button a:hover {
+  background-color: #00B4C3; /* nShift Cerulean */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 180, 195, 0.3);
+}
+
+.kl-pricing-v2__card--recommended .kl-pricing-v2__button a {
+  background: linear-gradient(135deg, #4AA3E7 0%, #00B4C3 100%);
+  box-shadow: 0 6px 20px rgba(74, 163, 231, 0.4);
+}
+
+.kl-pricing-v2__card--featured .kl-pricing-v2__button a {
+  background: linear-gradient(135deg, #D73096 0%, #DE8208 100%);
+  box-shadow: 0 6px 20px rgba(215, 48, 150, 0.4);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .kl-pricing-v2__cards {
+    gap: 24px;
+  }
+
+  .kl-pricing-v2__card {
+    padding: 32px 24px;
+  }
+
+  .kl-pricing-v2__price-amount {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .kl-pricing-v2__volume-section {
+    margin-bottom: 32px;
+  }
+
+  .kl-pricing-v2__slider-display {
+    font-size: 1.5rem;
+  }
+
+  .kl-pricing-v2__volume-value {
+    font-size: 2rem;
+  }
+
+  .kl-pricing-v2__toggle-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .kl-pricing-v2__card--recommended {
+    transform: scale(1);
+  }
 }

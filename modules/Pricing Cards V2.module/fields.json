@@ -1,8 +1,8 @@
 [
   {
-    "id": "toggle_labels",
-    "name": "toggle_labels",
-    "label": "Toggle Labels",
+    "id": "pricing_config",
+    "name": "pricing_config",
+    "label": "Pricing Configuration",
     "required": false,
     "locked": false,
     "children": [
@@ -12,8 +12,6 @@
         "label": "Monthly Label",
         "required": false,
         "locked": false,
-        "placeholder": "Monthly",
-        "allow_new_line": false,
         "type": "text",
         "default": "Monthly"
       },
@@ -23,39 +21,51 @@
         "label": "Yearly Label",
         "required": false,
         "locked": false,
-        "placeholder": "Yearly",
-        "allow_new_line": false,
         "type": "text",
         "default": "Yearly"
+      },
+      {
+        "id": "yearly_discount",
+        "name": "yearly_discount",
+        "label": "Yearly Discount (%)",
+        "required": false,
+        "locked": false,
+        "type": "number",
+        "default": 20
+      },
+      {
+        "id": "slider_label",
+        "name": "slider_label",
+        "label": "Slider Label",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Antal forsendelser per måned"
       }
     ],
     "tab": "CONTENT",
-    "expanded": false,
     "type": "group"
   },
   {
     "id": "plans",
     "name": "plans",
-    "label": "Plans",
+    "label": "Pricing Plans",
     "required": false,
     "locked": false,
     "occurrence": {
-      "min": null,
-      "max": null,
-      "sorting_label_field": null,
+      "min": 1,
+      "max": 4,
       "default": 3
     },
     "children": [
       {
-        "id": "header",
-        "name": "header",
-        "label": "Header",
+        "id": "name",
+        "name": "name",
+        "label": "Plan Name",
         "required": false,
         "locked": false,
-        "placeholder": "",
-        "allow_new_line": false,
         "type": "text",
-        "default": "Pro"
+        "default": "Starter"
       },
       {
         "id": "icon",
@@ -63,9 +73,6 @@
         "label": "Icon",
         "required": false,
         "locked": false,
-        "responsive": true,
-        "resizable": false,
-        "show_loading": false,
         "type": "image",
         "default": {
           "size_type": "auto",
@@ -75,22 +82,49 @@
         }
       },
       {
-        "id": "monthly_price",
-        "name": "monthly_price",
-        "label": "Monthly Price",
+        "id": "min_volume",
+        "name": "min_volume",
+        "label": "Minimum Volume (shipments/month)",
         "required": false,
         "locked": false,
-        "type": "richtext",
-        "default": "<h2>$85<span style=\"font-size: 14px;\">/mo</span></h2>"
+        "type": "number",
+        "default": 0
       },
       {
-        "id": "yearly_price",
-        "name": "yearly_price",
-        "label": "Yearly Price",
+        "id": "max_volume",
+        "name": "max_volume",
+        "label": "Maximum Volume (shipments/month)",
         "required": false,
         "locked": false,
-        "type": "richtext",
-        "default": "<h2>$850<span style=\"font-size: 14px;\">/yr</span></h2>"
+        "type": "number",
+        "default": 1000
+      },
+      {
+        "id": "base_price",
+        "name": "base_price",
+        "label": "Base Monthly Price",
+        "required": false,
+        "locked": false,
+        "type": "number",
+        "default": 299
+      },
+      {
+        "id": "price_per_unit",
+        "name": "price_per_unit",
+        "label": "Price Per Additional Shipment",
+        "required": false,
+        "locked": false,
+        "type": "number",
+        "default": 0
+      },
+      {
+        "id": "currency",
+        "name": "currency",
+        "label": "Currency Symbol",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "kr"
       },
       {
         "id": "description",
@@ -99,7 +133,7 @@
         "required": false,
         "locked": false,
         "type": "richtext",
-        "default": "<p>Flat fee for up to 200 users</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>"
+        "default": "<p>Perfect for small businesses getting started</p>"
       },
       {
         "id": "features",
@@ -110,112 +144,36 @@
         "occurrence": {
           "min": null,
           "max": null,
-          "sorting_label_field": null,
           "default": 5
         },
         "children": [
           {
-            "id": "description",
-            "name": "description",
-            "label": "Description",
+            "id": "text",
+            "name": "text",
+            "label": "Feature Text",
             "required": false,
             "locked": false,
-            "placeholder": "24/7 online support",
-            "allow_new_line": false,
             "type": "text",
-            "default": "24/7 online support"
+            "default": "Feature item"
           },
           {
-            "id": "image",
-            "name": "image",
-            "label": "Image",
+            "id": "included",
+            "name": "included",
+            "label": "Included",
             "required": false,
             "locked": false,
-            "responsive": true,
-            "resizable": true,
-            "show_loading": false,
-            "type": "image",
-            "default": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
+            "type": "boolean",
+            "default": true
           }
         ],
         "tab": "CONTENT",
-        "expanded": false,
         "type": "group",
         "default": [
-          {
-            "description": "Up to 200 users",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Up to 35 automatic data pushes",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Limited access to T2D3 API",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Assign user-level permissions",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "3 solution templates",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          }
+          {"text": "Real-time tracking", "included": true},
+          {"text": "Email notifications", "included": true},
+          {"text": "Basic analytics", "included": true},
+          {"text": "Standard support", "included": true},
+          {"text": "API access", "included": false}
         ]
       },
       {
@@ -226,515 +184,97 @@
         "locked": false,
         "children": [
           {
-            "id": "type",
-            "name": "type",
-            "label": "Type",
-            "required": false,
-            "locked": false,
-            "display": "select",
-            "choices": [
-              ["btn", "Button"],
-              ["cta", "HubSpot CTA"],
-              ["none", "None"]
-            ],
-            "multiple": false,
-            "reordering_enabled": true,
-            "preset": null,
-            "type": "choice",
-            "default": "btn"
-          },
-          {
-            "id": "style",
-            "name": "style",
-            "label": "Style",
-            "required": false,
-            "locked": false,
-            "visibility": {
-              "controlling_field": "type",
-              "controlling_field_path": null,
-              "controlling_value_regex": "none",
-              "property": null,
-              "operator": "NOT_EQUAL",
-              "access": null
-            },
-            "display": "select",
-            "choices": [
-              ["filled", "Filled"],
-              ["outlined", "Outlined"]
-            ],
-            "multiple": false,
-            "reordering_enabled": true,
-            "preset": null,
-            "type": "choice",
-            "default": "filled"
-          },
-          {
             "id": "text",
             "name": "text",
-            "label": "Text",
+            "label": "Button Text",
             "required": false,
             "locked": false,
-            "visibility": {
-              "controlling_field": "type",
-              "controlling_field_path": null,
-              "controlling_value_regex": "btn",
-              "property": null,
-              "operator": "EQUAL",
-              "access": null
-            },
-            "placeholder": "TRY FOR FREE",
-            "allow_new_line": false,
             "type": "text",
-            "default": "TRY FOR FREE"
+            "default": "Kom i gang"
           },
           {
-            "id": "anchor",
-            "name": "anchor",
-            "label": "Anchor",
+            "id": "url",
+            "name": "url",
+            "label": "Button URL",
             "required": false,
             "locked": false,
-            "visibility": {
-              "controlling_field": "type",
-              "controlling_field_path": null,
-              "controlling_value_regex": "btn",
-              "property": null,
-              "operator": "EQUAL",
-              "access": null
-            },
-            "children": [
-              {
-                "id": "type",
-                "name": "type",
-                "label": "Type",
-                "required": true,
-                "locked": false,
-                "display": "select",
-                "choices": [
-                  ["href", "Custom Link"],
-                  ["link", "HubSpot Link"]
-                ],
-                "multiple": false,
-                "reordering_enabled": true,
-                "preset": null,
-                "type": "choice",
-                "default": "href"
-              },
-              {
-                "id": "link",
-                "name": "link",
-                "label": "Link",
-                "required": false,
-                "locked": false,
-                "visibility": {
-                  "controlling_field": "type",
-                  "controlling_field_path": null,
-                  "controlling_value_regex": "link",
-                  "property": null,
-                  "operator": "EQUAL",
-                  "access": null
-                },
-                "supported_types": [
-                  "EXTERNAL",
-                  "CONTENT",
-                  "FILE",
-                  "EMAIL_ADDRESS",
-                  "BLOG",
-                  "CALL_TO_ACTION"
-                ],
-                "show_advanced_rel_options": false,
-                "type": "link",
-                "default": {
-                  "url": {
-                    "content_id": null,
-                    "type": "EXTERNAL",
-                    "href": ""
-                  },
-                  "open_in_new_tab": false,
-                  "no_follow": false
-                }
-              },
-              {
-                "id": "href",
-                "name": "href",
-                "label": "Href",
-                "required": false,
-                "locked": false,
-                "visibility": {
-                  "controlling_field": "type",
-                  "controlling_field_path": null,
-                  "controlling_value_regex": "href",
-                  "property": null,
-                  "operator": "EQUAL",
-                  "access": null
-                },
-                "placeholder": "#",
-                "allow_new_line": false,
-                "type": "text",
-                "default": "#"
-              }
-            ],
-            "tab": "CONTENT",
-            "expanded": false,
-            "type": "group",
-            "default": {
-              "type": "href",
-              "link": {
-                "url": {
-                  "content_id": null,
-                  "type": "EXTERNAL",
-                  "href": ""
-                },
-                "open_in_new_tab": false,
-                "no_follow": false
-              },
-              "href": "#"
-            }
-          },
-          {
-            "id": "cta",
-            "name": "cta",
-            "label": "CTA",
-            "required": false,
-            "locked": false,
-            "visibility": {
-              "controlling_field": "type",
-              "controlling_field_path": null,
-              "controlling_value_regex": "cta",
-              "property": null,
-              "operator": "EQUAL",
-              "access": null
-            },
-            "type": "cta"
+            "type": "text",
+            "default": "#"
           }
         ],
         "tab": "CONTENT",
-        "expanded": false,
-        "type": "group",
-        "default": {
-          "type": "btn",
-          "style": "filled",
-          "text": "TRY FOR FREE",
-          "anchor": {
-            "type": "href",
-            "link": {
-              "url": {
-                "content_id": null,
-                "type": "EXTERNAL",
-                "href": ""
-              },
-              "open_in_new_tab": false,
-              "no_follow": false
-            },
-            "href": "#"
-          }
-        }
+        "type": "group"
       },
       {
         "id": "badge",
         "name": "badge",
-        "label": "Badge",
+        "label": "Badge Text (optional)",
         "required": false,
         "locked": false,
-        "placeholder": "Most popular",
-        "allow_new_line": false,
         "type": "text"
       }
     ],
     "tab": "CONTENT",
-    "expanded": false,
     "type": "group",
     "default": [
       {
-        "header": "Basic",
-        "icon": {
-          "size_type": "auto",
-          "src": "",
-          "alt": null,
-          "loading": "disabled"
-        },
-        "monthly_price": "<h2>$30<span style=\"font-size: 14px;\">/mo</span></h2>",
-        "yearly_price": "<h2>$300<span style=\"font-size: 14px;\">/yr</span></h2>",
-        "description": "<p>Flat fee for up to 200 users</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>",
+        "name": "Starter",
+        "min_volume": 0,
+        "max_volume": 1000,
+        "base_price": 299,
+        "price_per_unit": 0,
+        "currency": "kr",
+        "description": "<p>Perfekt til små virksomheder der kommer i gang</p>",
         "features": [
-          {
-            "description": "24/7 online support",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Basic integrations",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Standard support",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Monthly reports",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Email support",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          }
+          {"text": "Op til 1.000 forsendelser/måned", "included": true},
+          {"text": "Real-time tracking", "included": true},
+          {"text": "Email notifikationer", "included": true},
+          {"text": "Basis analytics", "included": true},
+          {"text": "Standard support", "included": true},
+          {"text": "API adgang", "included": false}
         ],
-        "button": {
-          "type": "btn",
-          "style": "filled",
-          "text": "TRY FOR FREE",
-          "anchor": {
-            "type": "href",
-            "link": {
-              "url": {
-                "content_id": null,
-                "type": "EXTERNAL",
-                "href": ""
-              },
-              "open_in_new_tab": false,
-              "no_follow": false
-            },
-            "href": "#"
-          }
-        }
+        "button": {"text": "Kom i gang", "url": "#"}
       },
       {
-        "header": "Pro",
-        "icon": {
-          "size_type": "auto",
-          "src": "",
-          "alt": null,
-          "loading": "disabled"
-        },
-        "monthly_price": "<h2>$85<span style=\"font-size: 14px;\">/mo</span></h2>",
-        "yearly_price": "<h2>$850<span style=\"font-size: 14px;\">/yr</span></h2>",
-        "description": "<p>Flat fee for up to 200 users</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>",
+        "name": "Professional",
+        "min_volume": 1001,
+        "max_volume": 10000,
+        "base_price": 999,
+        "price_per_unit": 0.5,
+        "currency": "kr",
+        "description": "<p>For voksende virksomheder med højere volumen</p>",
         "features": [
-          {
-            "description": "24/7 online support",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Advanced integrations",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Priority support",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Weekly reports",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Phone & email support",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          }
+          {"text": "1.000 - 10.000 forsendelser/måned", "included": true},
+          {"text": "Real-time tracking", "included": true},
+          {"text": "Email & SMS notifikationer", "included": true},
+          {"text": "Avanceret analytics", "included": true},
+          {"text": "Prioriteret support", "included": true},
+          {"text": "Fuld API adgang", "included": true},
+          {"text": "Custom branding", "included": true}
         ],
-        "button": {
-          "type": "btn",
-          "style": "filled",
-          "text": "TRY FOR FREE",
-          "anchor": {
-            "type": "href",
-            "link": {
-              "url": {
-                "content_id": null,
-                "type": "EXTERNAL",
-                "href": ""
-              },
-              "open_in_new_tab": false,
-              "no_follow": false
-            },
-            "href": "#"
-          }
-        },
-        "badge": "Most popular"
+        "button": {"text": "Vælg Professional", "url": "#"},
+        "badge": "Mest populær"
       },
       {
-        "header": "Enterprise",
-        "icon": {
-          "size_type": "auto",
-          "src": "",
-          "alt": null,
-          "loading": "disabled"
-        },
-        "monthly_price": "<h2>Custom</h2>",
-        "yearly_price": "<h2>Custom</h2>",
-        "description": "<p>Get in touch for a custom quote</p>\n<p>Set the foundation with all your team needs for basic data integrations.</p>",
+        "name": "Enterprise",
+        "min_volume": 10001,
+        "max_volume": 999999,
+        "base_price": 2999,
+        "price_per_unit": 0.3,
+        "currency": "kr",
+        "description": "<p>Skræddersyet til store virksomheder</p>",
         "features": [
-          {
-            "description": "24/7 dedicated support",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Custom integrations",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Dedicated account manager",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Real-time analytics",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          },
-          {
-            "description": "Custom SLA",
-            "image": {
-              "size_type": "auto",
-              "src": "https://f.hubspotusercontent30.net/hubfs/8823337/Checkmark.svg",
-              "alt": "Checkmark",
-              "loading": "lazy",
-              "width": 400,
-              "height": 400,
-              "max_width": 400,
-              "max_height": 400
-            }
-          }
+          {"text": "10.000+ forsendelser/måned", "included": true},
+          {"text": "Real-time tracking", "included": true},
+          {"text": "Multi-channel notifikationer", "included": true},
+          {"text": "Fuld business intelligence", "included": true},
+          {"text": "Dedikeret account manager", "included": true},
+          {"text": "Fuld API adgang", "included": true},
+          {"text": "Custom branding", "included": true},
+          {"text": "White label løsning", "included": true},
+          {"text": "SLA garanti", "included": true}
         ],
-        "button": {
-          "type": "btn",
-          "style": "filled",
-          "text": "CONTACT SALES",
-          "anchor": {
-            "type": "href",
-            "link": {
-              "url": {
-                "content_id": null,
-                "type": "EXTERNAL",
-                "href": ""
-              },
-              "open_in_new_tab": false,
-              "no_follow": false
-            },
-            "href": "#"
-          }
-        }
+        "button": {"text": "Kontakt salg", "url": "#"}
       }
     ]
   }

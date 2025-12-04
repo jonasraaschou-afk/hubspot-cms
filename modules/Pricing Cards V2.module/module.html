@@ -1,60 +1,136 @@
-{% import '../macros.html' %}
+<div class="kl-pricing-v2" data-module-id="{{ name }}">
 
-<div class="kl-pricing-v2">
-  <!-- Pricing Toggle -->
+  <!-- Volume Slider Section -->
+  <div class="kl-pricing-v2__volume-section">
+    <label class="kl-pricing-v2__slider-label">
+      {{ module.pricing_config.slider_label }}
+    </label>
+    <div class="kl-pricing-v2__slider-display">
+      <span class="kl-pricing-v2__volume-value" data-volume-display>1,000</span> forsendelser/måned
+    </div>
+    <div class="kl-pricing-v2__slider-wrapper">
+      <input
+        type="range"
+        class="kl-pricing-v2__slider"
+        min="0"
+        max="50000"
+        value="1000"
+        step="100"
+        data-volume-slider
+      >
+      <div class="kl-pricing-v2__slider-track">
+        <div class="kl-pricing-v2__slider-fill" data-slider-fill></div>
+      </div>
+    </div>
+    <div class="kl-pricing-v2__slider-labels">
+      <span>0</span>
+      <span>10k</span>
+      <span>25k</span>
+      <span>50k+</span>
+    </div>
+  </div>
+
+  <!-- Billing Cycle Toggle -->
   <div class="kl-pricing-v2__toggle-container">
     <span class="kl-pricing-v2__toggle-label kl-pricing-v2__toggle-label--active" data-billing="monthly">
-      {{ module.toggle_labels.monthly_label }}
+      {{ module.pricing_config.monthly_label }}
     </span>
     <label class="kl-pricing-v2__toggle-switch">
-      <input type="checkbox" class="kl-pricing-v2__toggle-input" id="pricing-toggle-{{ name }}">
+      <input type="checkbox" class="kl-pricing-v2__toggle-input" data-billing-toggle>
       <span class="kl-pricing-v2__toggle-slider"></span>
     </label>
     <span class="kl-pricing-v2__toggle-label" data-billing="yearly">
-      {{ module.toggle_labels.yearly_label }}
+      {{ module.pricing_config.yearly_label }}
+      <span class="kl-pricing-v2__discount-badge">Spar {{ module.pricing_config.yearly_discount }}%</span>
     </span>
   </div>
 
   <!-- Pricing Cards -->
   <div class="kl-pricing-v2__cards">
-    {% for item in module.plans %}
-      <div class="kl-pricing-v2__card{% if item.badge %} kl-pricing-v2__card--featured{% endif %}">
-        {% if item.badge %}
-          <span class="kl-pricing-v2__badge">{{ item.badge }}</span>
+    {% for plan in module.plans %}
+      <div
+        class="kl-pricing-v2__card{% if plan.badge %} kl-pricing-v2__card--featured{% endif %}"
+        data-plan-index="{{ loop.index0 }}"
+        data-min-volume="{{ plan.min_volume }}"
+        data-max-volume="{{ plan.max_volume }}"
+        data-base-price="{{ plan.base_price }}"
+        data-price-per-unit="{{ plan.price_per_unit }}"
+        data-currency="{{ plan.currency }}"
+      >
+        {% if plan.badge %}
+          <span class="kl-pricing-v2__badge">{{ plan.badge }}</span>
         {% endif %}
-        {% if item.icon.src %}
+
+        {% if plan.icon.src %}
           <div class="kl-pricing-v2__icon">
-            <img src="{{ item.icon.src }}" alt="{{ item.icon.alt }}" />
+            <img src="{{ plan.icon.src }}" alt="{{ plan.icon.alt }}" />
           </div>
         {% endif %}
-        <h4>{{ item.header }}</h4>
 
-        <!-- Monthly Price -->
-        <div class="kl-pricing-v2__price kl-pricing-v2__price--monthly" data-billing="monthly">
-          {{ item.monthly_price }}
-        </div>
+        <h4 class="kl-pricing-v2__plan-name">{{ plan.name }}</h4>
 
-        <!-- Yearly Price -->
-        <div class="kl-pricing-v2__price kl-pricing-v2__price--yearly" data-billing="yearly" style="display: none;">
-          {{ item.yearly_price }}
+        <!-- Dynamic Price Display -->
+        <div class="kl-pricing-v2__price-container">
+          <div class="kl-pricing-v2__price" data-price-display>
+            <span class="kl-pricing-v2__price-amount">{{ plan.base_price }}</span>
+            <span class="kl-pricing-v2__price-currency">{{ plan.currency }}</span>
+            <span class="kl-pricing-v2__price-period">/måned</span>
+          </div>
+          <div class="kl-pricing-v2__price-note" data-yearly-savings style="display: none;">
+            <small>Spar <strong data-savings-amount></strong> {{ plan.currency }}/år</small>
+          </div>
         </div>
 
         <div class="kl-pricing-v2__description">
-          {{ item.description }}
+          {{ plan.description }}
         </div>
+
         <hr/>
+
         <ul class="kl-pricing-v2__features">
-          {% for feature in item.features %}
-            <li>
-              <span class="kl-pricing-v2__bullet">{{ render_image(feature.image) }}</span>
-              <span>{{ feature.description }}</span>
+          {% for feature in plan.features %}
+            <li class="{% if not feature.included %}kl-pricing-v2__feature--disabled{% endif %}">
+              <span class="kl-pricing-v2__feature-icon">
+                {% if feature.included %}
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.3337 4L6.00033 11.3333L2.66699 8" stroke="#00B4C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {% else %}
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4L4 12M4 4L12 12" stroke="#9EA3A9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {% endif %}
+              </span>
+              <span>{{ feature.text }}</span>
             </li>
           {% endfor %}
         </ul>
+
         <div class="kl-pricing-v2__button">
-          {{ render_button(item.button) }}
+          <a href="{{ plan.button.url }}" class="button">
+            {{ plan.button.text }}
+          </a>
         </div>
       </div>
     {% endfor %}
   </div>
+
+  <!-- Hidden config data for JavaScript -->
+  <script type="application/json" data-pricing-config>
+    {
+      "yearlyDiscount": {{ module.pricing_config.yearly_discount }},
+      "plans": [
+        {% for plan in module.plans %}
+        {
+          "name": "{{ plan.name }}",
+          "minVolume": {{ plan.min_volume }},
+          "maxVolume": {{ plan.max_volume }},
+          "basePrice": {{ plan.base_price }},
+          "pricePerUnit": {{ plan.price_per_unit }},
+          "currency": "{{ plan.currency }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  </script>
 </div>
